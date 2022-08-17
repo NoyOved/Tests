@@ -13,13 +13,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Cypress run
-      uses: cypress-io/github-actions@v2
-      with:
-        build: npm run build
-        start: npm start
-    - name: Jest run
-      run: npm test
+    - name: install python packeges
+      run: 
+        pip install pandas
+        pip install numpy
+        pip install unittest
+    - name: run the calculate test
+      run: python test_calculate.py
         
         
         
